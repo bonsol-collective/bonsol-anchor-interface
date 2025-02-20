@@ -1,0 +1,22 @@
+[package]
+name = "bonsol-anchor-interface"
+version = "0.4.6"
+description = "Anchor Interface definitions for Bonsol"
+authors = ["anagram build team"]
+repository = "https://github.com/anagrambuild/bonsol-anchor-interface"
+license = "MIT"
+edition = "2021"
+
+[features]
+idl-build = ["anchor-lang/idl-build"]
+
+
+[dependencies]
+anchor-lang = { git ="https://github.com/coral-xyz/anchor.git", rev="a2937a9326f834859ff5bbe942f073ba1b0bcdc5"}
+bonsol-schema = "0.4.5"
+bonsol-interface = { version = "0.4.5", features = ["on-chain"], default-features = false }
+paste = "1.0.12"
+
+
+[lints.rust]
+unused_macros = "allow"
